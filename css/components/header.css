@@ -28,7 +28,7 @@
 .niftybox-header-logo {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
   text-decoration: none;
   transition: var(--transition-fast);
 }
