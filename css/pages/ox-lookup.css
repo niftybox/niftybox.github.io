@@ -1,0 +1,257 @@
+/**
+ * NiftyBox Legal Pages Styles (Terms & Privacy Policy)
+ */
+
+@import url('../tokens.css');
+
+/* Legal Page Main */
+.niftybox-legal-main {
+  padding: var(--spacing-3xl) 0 var(--spacing-5xl);
+  min-height: 70vh;
+}
+
+/* Breadcrumb Navigation */
+.niftybox-breadcrumb {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.niftybox-breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.niftybox-breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin: 0;
+}
+
+.niftybox-breadcrumb-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: var(--transition-fast);
+}
+
+.niftybox-breadcrumb-link:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.niftybox-breadcrumb-separator {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.niftybox-breadcrumb-current {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Legal Content Container */
+.niftybox-legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Legal Header */
+.niftybox-legal-header {
+  text-align: center;
+  margin-bottom: var(--spacing-4xl);
+  padding-bottom: var(--spacing-2xl);
+  border-bottom: 2px solid var(--color-border-primary);
+}
+
+.niftybox-legal-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.niftybox-legal-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-xs);
+}
+
+.niftybox-legal-date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Legal Body */
+.niftybox-legal-body {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.niftybox-legal-section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.niftybox-legal-section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+.niftybox-legal-subsection-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.niftybox-legal-section p {
+  margin-bottom: var(--spacing-md);
+}
+
+.niftybox-legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+.niftybox-legal-list {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding-left: var(--spacing-xl);
+  list-style-type: disc;
+}
+
+.niftybox-legal-list li {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.niftybox-legal-list li strong {
+  color: var(--color-text-primary);
+}
+
+.niftybox-legal-section a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.niftybox-legal-section a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Privacy Commitment Section */
+.niftybox-privacy-commitment {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  margin-top: var(--spacing-4xl);
+}
+
+.niftybox-privacy-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.niftybox-privacy-highlight {
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.niftybox-privacy-highlight strong {
+  display: block;
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-xs);
+}
+
+.niftybox-privacy-highlight p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Legal Footer */
+.niftybox-legal-footer {
+  margin-top: var(--spacing-4xl);
+  padding-top: var(--spacing-2xl);
+  border-top: 2px solid var(--color-border-primary);
+  text-align: center;
+}
+
+.niftybox-legal-footer p {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.niftybox-legal-footer-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-fast);
+}
+
+.niftybox-legal-footer-link:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+.niftybox-legal-footer-separator {
+  color: var(--color-text-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .niftybox-legal-main {
+    padding: var(--spacing-2xl) 0 var(--spacing-4xl);
+  }
+
+  .niftybox-legal-header {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .niftybox-legal-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .niftybox-legal-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .niftybox-legal-section-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .niftybox-legal-subsection-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .niftybox-privacy-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .niftybox-privacy-commitment {
+    padding: var(--spacing-xl);
+  }
+}

@@ -1,0 +1,191 @@
+/**
+ * NiftyBox Card Component Styles
+ */
+
+@import url('../tokens.css');
+
+/* Base Card */
+.niftybox-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-dark-sm);
+}
+
+.niftybox-card:hover {
+  border-color: var(--color-border-secondary);
+  box-shadow: var(--shadow-dark-md);
+  transform: translateY(-4px);
+}
+
+/* Product Card */
+.niftybox-card-product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.niftybox-card-product-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.niftybox-card-product-icon {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-dark-md);
+}
+
+.niftybox-card-product-title-wrapper {
+  flex: 1;
+}
+
+.niftybox-card-product-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.niftybox-card-product-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  margin: 0;
+}
+
+.niftybox-card-product-description {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-xl);
+  flex-grow: 1;
+}
+
+.niftybox-card-product-badges {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.niftybox-card-product-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border-primary);
+}
+
+.niftybox-card-product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-primary);
+  transition: var(--transition-fast);
+}
+
+.niftybox-card-product-link:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: var(--color-surface-hover);
+  text-decoration: none;
+}
+
+.niftybox-card-product-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Feature Card */
+.niftybox-card-feature {
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-2xl);
+}
+
+.niftybox-card-feature-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-lg);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-xl);
+  background: var(--color-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.niftybox-card-feature-icon svg {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+
+.niftybox-card-feature-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.niftybox-card-feature-description {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* Card Grid */
+.niftybox-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-3xl);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .niftybox-card {
+    padding: var(--spacing-xl);
+  }
+
+  .niftybox-cards-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .niftybox-card-product-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .niftybox-card-product-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .niftybox-card-product-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .niftybox-card-product-badges {
+    width: 100%;
+  }
+
+  .niftybox-card-product-links {
+    flex-direction: column;
+  }
+
+  .niftybox-card-product-link {
+    justify-content: center;
+  }
+}

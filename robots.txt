@@ -1,0 +1,12 @@
+# robots.txt for NiftyBox GitHub Pages
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin or test directories (if any)
+# Disallow: /admin/
+# Disallow: /test/
+
+# Sitemap location
+Sitemap: https://niftybox.github.io/sitemap.xml

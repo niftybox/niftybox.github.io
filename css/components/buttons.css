@@ -1,0 +1,223 @@
+/**
+ * NiftyBox Button Component Styles
+ */
+
+@import url('../tokens.css');
+
+/* Base Button */
+.niftybox-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.niftybox-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.niftybox-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Primary Button */
+.niftybox-btn-primary {
+  background: var(--color-gradient);
+  color: var(--color-text-on-primary);
+  box-shadow: var(--shadow-dark-md);
+}
+
+.niftybox-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-dark-lg);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.niftybox-btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-dark-sm);
+}
+
+/* Secondary Button */
+.niftybox-btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.niftybox-btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  text-decoration: none;
+}
+
+/* Ghost Button */
+.niftybox-btn-ghost {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-primary);
+}
+
+.niftybox-btn-ghost:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-secondary);
+  text-decoration: none;
+}
+
+/* Button Sizes */
+.niftybox-btn-sm {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+}
+
+.niftybox-btn-lg {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  font-size: var(--font-size-lg);
+}
+
+/* Icon Button */
+.niftybox-btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: var(--radius-full);
+}
+
+.niftybox-btn-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Scroll to Top Button */
+.niftybox-scroll-to-top {
+  position: fixed;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  z-index: var(--z-index-fixed);
+  background: var(--color-gradient);
+  color: var(--color-text-on-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-dark-lg);
+  transition: var(--transition-normal);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+.niftybox-scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.niftybox-scroll-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-dark-xl);
+}
+
+.niftybox-scroll-to-top:active {
+  transform: translateY(-2px);
+}
+
+.niftybox-scroll-to-top svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Theme Toggle Button */
+.niftybox-theme-toggle {
+  position: fixed;
+  top: var(--spacing-xl);
+  right: var(--spacing-xl);
+  z-index: var(--z-index-tooltip);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-dark-md);
+  transition: var(--transition-fast);
+}
+
+.niftybox-theme-toggle:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-primary);
+  transform: rotate(20deg);
+}
+
+.niftybox-theme-toggle:active {
+  transform: rotate(20deg) scale(0.95);
+}
+
+.niftybox-theme-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Store Badge Links */
+.niftybox-store-badge {
+  display: inline-block;
+  transition: var(--transition-fast);
+}
+
+.niftybox-store-badge:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.niftybox-store-badge img {
+  height: 60px;
+  width: auto;
+  border-radius: var(--radius-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .niftybox-scroll-to-top {
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    width: 44px;
+    height: 44px;
+  }
+
+  .niftybox-theme-toggle {
+    top: 80px; /* Position below the header to avoid overlap */
+    right: var(--spacing-lg);
+    width: 44px;
+    height: 44px;
+  }
+
+  .niftybox-btn-lg {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--font-size-base);
+  }
+}
